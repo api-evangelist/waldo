@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.waldo.com/reference/authentication
+docs: https://docs.waldo.com/reference/authentication
+summary:
+  types: [apiKey]
+  api_key_in: [header, environment]
+  oauth2_flows: []
+schemes:
+  - name: WaldoApiToken
+    type: apiKey
+    description: >-
+      Waldo authenticates API and CLI access with an API token. Two token scopes exist: a
+      user-scoped token for development (found in the Profile tab of account settings) and an
+      application-scoped CI token (found in the General tab of the app Configuration). For the
+      WebdriverIO service the token is supplied via the WALDO_API_TOKEN environment variable or
+      the `key` option in wdio.conf; the CLI supplies it via `waldo auth` or at install time.
+    token_scopes:
+      - name: user
+        location: Profile tab (account settings)
+        use: development / local runs
+      - name: ci
+        location: General tab (app Configuration)
+        use: CI/CD pipelines
+    env_var: WALDO_API_TOKEN
+    sources: [docs.waldo.com/reference/authentication, github.com/waldoapp/wdio-service]

@@ -1,8 +1,26 @@
 aid: waldo
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/waldo.png
 name: Waldo
-description: 'Waldo is a company surfaced as a portfolio company of insight-partners and added to the
-  API Evangelist network as a stub for enrichment. Sector: devops. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: >-
+  Waldo is a no-code mobile test automation platform for iOS and Android that lets any team member
+  create, run, and maintain reliable end-to-end tests on a cloud of virtual devices (iOS simulators
+  and Android emulators) with zero device setup. Its Scripting (Core) API exposes a W3C WebDriver
+  and Appium-compatible endpoint at core.waldo.com so engineers can programmatically create sessions
+  on cloud devices and drive native, hybrid, and mobile-web apps, capturing video replays, logs, and
+  network calls. Build upload runs through a Go CLI, GitHub Actions, Bitrise, and a fastlane plugin.
+  Waldo was acquired by Tricentis in July 2023 and is part of the Tricentis mobile testing portfolio.
 url: https://raw.githubusercontent.com/api-evangelist/waldo/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,11 +30,36 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Devops
-apis: []
+- Testing
+- Mobile
+- Test Automation
+- Quality Engineering
+- WebDriver
+- Appium
+- CI/CD
+apis:
+- name: Waldo Scripting (Core) API
+  description: >-
+    W3C WebDriver + Appium-compatible endpoint for creating sessions on Waldo cloud devices and
+    driving native, hybrid, and mobile-web apps programmatically.
+  humanURL: https://docs.waldo.com/reference/introduction
+  baseURL: https://core.waldo.com
+  tags:
+  - Mobile
+  - Testing
+  - WebDriver
+  - Appium
+  properties:
+  - type: Authentication
+    url: authentication/waldo-authentication.yml
+  - type: Conventions
+    url: conventions/waldo-conventions.yml
+  - type: Conformance
+    url: conformance/waldo-conformance.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +68,40 @@ maintainers:
 common:
 - type: Website
   url: https://www.waldo.com/
+- type: DeveloperPortal
+  url: https://docs.waldo.com/
+- type: Documentation
+  url: https://docs.waldo.com/
+- type: APIReference
+  url: https://docs.waldo.com/reference/introduction
+- type: GettingStarted
+  url: https://docs.waldo.com/docs/waldo-cli
+- type: Pricing
+  url: https://www.waldo.com/pricing
+- type: Blog
+  url: https://www.waldo.com/blog
+- type: GitHubOrganization
+  url: https://github.com/waldoapp
+- type: SignUp
+  url: https://app.waldo.com/
+- type: Packages
+  url: packages/waldo-packages.yml
+- type: SDKs
+  url: packages/waldo-packages.yml
+- type: CLI
+  url: cli/waldo-cli.yml
+- type: Authentication
+  url: authentication/waldo-authentication.yml
+- type: Conventions
+  url: conventions/waldo-conventions.yml
+- type: Conformance
+  url: conformance/waldo-conformance.yml
+- type: WellKnown
+  url: well-known/waldo-well-known.yml
+- type: LLMsTxt
+  url: llms/waldo-llms.txt
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 7
+  pass: local-v1

@@ -1,0 +1,31 @@
+# Waldo
+
+> Waldo is a no-code mobile test automation platform for iOS and Android. Teams create, run, and maintain reliable end-to-end tests on a cloud of virtual devices (iOS simulators and Android emulators) with zero device setup. The Scripting (Core) API is a W3C WebDriver + Appium-compatible endpoint at core.waldo.com for driving native, hybrid, and mobile-web apps programmatically. Waldo was acquired by Tricentis in July 2023.
+
+## APIs
+- [Waldo Scripting (Core) API — Introduction](https://docs.waldo.com/reference/introduction): W3C WebDriver + Appium-compatible endpoint (core.waldo.com) to create sessions on cloud devices and drive apps.
+- [Authentication](https://docs.waldo.com/reference/authentication): API-token authentication (user-scoped and CI/application-scoped tokens).
+
+## Docs
+- [Waldo Documentation](https://docs.waldo.com/): setup, first test, CI/CLI upload, interactive sessions, scripting.
+- [Waldo CLI](https://docs.waldo.com/docs/waldo-cli): authenticate and upload iOS/Android builds; trigger test runs.
+- [Scripting overview](https://www.waldo.com/scripting): programmatic mobile testing with the WebDriver/Appium-compatible API.
+- [Mobile Test Automation](https://www.waldo.com/product/mobile-test-automation): product overview.
+- [Pricing](https://www.waldo.com/pricing)
+- [Blog](https://www.waldo.com/blog)
+- [Tricentis Waldo manual](https://docs.tricentis.com/all/manuals/waldo.htm)
+
+## Packages
+- [@waldoapp/wdio-service](https://www.npmjs.com/package/@waldoapp/wdio-service): WebdriverIO service for Waldo (npm, official).
+- [waldo-go-cli](https://github.com/waldoapp/waldo-go-cli): Waldo command-line tool (Go, official).
+- [waldo-go-agent](https://github.com/waldoapp/waldo-go-agent): engine behind the CLI and CI wrappers.
+- [fastlane-plugin-waldo](https://github.com/waldoapp/fastlane-plugin-waldo): fastlane upload plugin.
+- [GitHub organization](https://github.com/waldoapp): all Waldo open-source integrations (GitHub Actions, Bitrise, fastlane, samples).
+
+## Repo artifacts
+- packages/waldo-packages.yml
+- cli/waldo-cli.yml
+- authentication/waldo-authentication.yml
+- conventions/waldo-conventions.yml
+- conformance/waldo-conformance.yml
+- well-known/waldo-well-known.yml

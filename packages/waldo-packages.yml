@@ -1,0 +1,37 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/waldoapp
+packages:
+  - language: javascript
+    registry: npm
+    name: "@waldoapp/wdio-service"
+    version: 1.1.1
+    url: https://www.npmjs.com/package/@waldoapp/wdio-service
+    repository: https://github.com/waldoapp/wdio-service
+    install: npm install @waldoapp/wdio-service --save-dev
+    description: WebdriverIO service that configures Waldo as the remote WebDriver endpoint (core.waldo.com) and adds mobile-testing commands and Waldo capabilities.
+    license: MIT
+    official: true
+  - language: go
+    registry: github
+    name: waldo-go-cli
+    url: https://github.com/waldoapp/waldo-go-cli
+    install: curl -fsSL https://raw.githubusercontent.com/waldoapp/waldo-go-cli/master/install-waldo.sh | bash
+    description: Command-line tool to authenticate with Waldo and upload iOS/Android builds and trigger test runs.
+    license: MIT
+    official: true
+  - language: go
+    registry: github
+    name: waldo-go-agent
+    url: https://github.com/waldoapp/waldo-go-agent
+    description: Agent providing the engine behind the Waldo Go CLI, Waldo Bitrise Step, and other wrappers.
+    license: MIT
+    official: true
+  - language: ruby
+    registry: rubygems
+    name: fastlane-plugin-waldo
+    url: https://github.com/waldoapp/fastlane-plugin-waldo
+    install: fastlane add_plugin waldo
+    description: fastlane plugin to upload builds to Waldo from a fastlane lane.
+    license: MIT
+    official: true

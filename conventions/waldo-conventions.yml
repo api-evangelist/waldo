@@ -1,0 +1,38 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.waldo.com/reference/introduction
+authentication:
+  style: api-token
+  detail: See authentication/waldo-authentication.yml — user-scoped and CI (application-scoped) API tokens.
+protocol:
+  style: w3c-webdriver
+  detail: >-
+    The Scripting (Core) API is a W3C WebDriver + Appium-compatible endpoint at core.waldo.com.
+    Clients create a WebDriver session on a cloud device (iOS simulator / Android emulator) and
+    drive it with standard WebDriver/Appium commands plus Waldo extension commands under
+    waldo:options.
+session_model:
+  version_target: >-
+    The app build to test is selected by a versionId (e.g. appv-0123456789abcdef) supplied via the
+    versionId option or the appium:app capability.
+  reconnect: An existing session can be re-entered with the sessionId option (WALDO_SESSION_ID) for interactive development.
+  capabilities:
+    - waldo:options.automationName  # 'Waldo' or 'Appium'
+    - waldo:options.deviceName      # e.g. 'Pixel 7'
+    - waldo:options.osVersion
+    - waldo:options.interceptNetwork
+idempotency:
+  supported: false
+  note: No documented idempotency-key contract; WebDriver session creation is inherently non-idempotent.
+pagination:
+  supported: unknown
+error_envelope:
+  style: webdriver
+  detail: Errors follow the W3C WebDriver error response model rather than a bespoke JSON envelope.
+artifacts:
+  detail: Completed runs expose video replay, logs, and network calls via app.waldo.com replays.
+cross_links:
+  authentication: authentication/waldo-authentication.yml
+  conformance: conformance/waldo-conformance.yml
+  packages: packages/waldo-packages.yml
+  cli: cli/waldo-cli.yml

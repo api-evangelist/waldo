@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/waldoapp/waldo-go-cli
+name: Waldo CLI
+language: go
+latest_version: 4.0.0
+repository: https://github.com/waldoapp/waldo-go-cli
+docs: https://docs.waldo.com/docs/waldo-cli
+license: MIT
+install:
+  - platform: macos-linux
+    method: install script
+    command: curl -fsSL https://raw.githubusercontent.com/waldoapp/waldo-go-cli/master/install-waldo.sh | bash
+  - platform: ci
+    method: install script (non-interactive)
+    command: install-waldo.sh
+  - platform: windows
+    method: download binary from the latest release (waldo-windows-x86_64.exe / waldo-windows-arm64.exe) and add to PATH
+authentication:
+  method: api-token
+  notes: Retrieve the API token from the Profile tab in Waldo account settings; pass during installation or via `waldo auth`.
+commands:
+  - name: auth
+    description: Authenticate user access to Waldo with an API token.
+  - name: upload
+    description: Upload an iOS or Android build to Waldo for processing.
+  - name: trigger
+    description: Trigger a test flow run.
+  - name: help
+    description: Show all available commands and features.
