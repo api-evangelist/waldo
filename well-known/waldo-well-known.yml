@@ -1,10 +1,16 @@
 generated: '2026-07-21'
 method: searched
 host: https://www.waldo.com
-documents:
+notes: www.waldo.com now 301-redirects to tricentis.com (Waldo was acquired by Tricentis in July 2023).
+  No /.well-known/security.txt was served (404). No positive well-known discovery documents were found
+  for the public Waldo hosts probed.
+hosts:
+- host: https://www.waldo.com
+  documents:
   - path: /.well-known/security.txt
     status: 404
-notes: >-
-  www.waldo.com now 301-redirects to tricentis.com (Waldo was acquired by Tricentis in July 2023).
-  No /.well-known/security.txt was served (404). No positive well-known discovery documents were
-  found for the public Waldo hosts probed.
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.

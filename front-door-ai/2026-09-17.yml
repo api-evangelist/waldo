@@ -1,0 +1,30 @@
+# Front Door AI Index — waldo — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: waldo
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.waldo.com
+  final_host: www.tricentis.com
+  ownership: inherited
+  owner: waldo
+  shares_host_with: null
+  inherited_from: www.tricentis.com
+  verdict: scored
+  score: null
+  host_score: 53
+  density: null
+  words: 1039
+  tiers:
+    agentic: 32
+    core: 21
+    model: 0
+  ambiguous: 14
+  top_terms:
+    agentic: 29
+    AI: 21
+    agent: 8
+    automation: 4
+    AI agent: 3
+    intelligence: 2
